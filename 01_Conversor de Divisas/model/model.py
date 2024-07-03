@@ -32,6 +32,7 @@ class Calculator:
         self.insert_name()
         self.insert_date()
         self.insert_daytime()
+        self.insert_money()
 
     def insert_name(self):
         self.name = ""
@@ -65,6 +66,20 @@ class Calculator:
             self.daytime = input("Time of transaction (morning, noon or night): ")
             if self.daytime == "":
                 print("Invalid daytime.")
+            else:
+                self.daytime.tolower()
             if self.daytime not in array:
                 print("Invalid daytime.")
                 self.daytime = ""
+        
+    def insert_money(self):
+        self.money = ""
+        while self.money == "":
+            self.money = input("Amount of dollars to exchange: ")
+            if self.money == "":
+                print("Invalid amount.")
+            try:
+                float(self.money)
+            except:
+                print("Invalid amount.")
+                self.money = ""
