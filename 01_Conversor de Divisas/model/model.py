@@ -67,7 +67,7 @@ class Calculator:
             if self.daytime == "":
                 print("Invalid daytime.")
             else:
-                self.daytime.tolower()
+                self.daytime.lower()
             if self.daytime not in array:
                 print("Invalid daytime.")
                 self.daytime = ""
@@ -83,3 +83,31 @@ class Calculator:
             except:
                 print("Invalid amount.")
                 self.money = ""
+
+class Printer:
+    def __init__(self, rate, calculator):
+        self.rate = rate
+        self.calculator = calculator
+        self.print_all()
+    
+    def print_notes(self):
+        string = ""
+        if self.total == 0:
+            print("You will receive no money at all")
+        else:
+            string = "You will receive "
+            if self.total // 10 > 0:
+                string += str(int(self.total // 10)) + " 10€-notes"
+            if int(self.total) % 1 > 0:
+                string += " and " + str(int(self.total % 1)) + " 1€ coins"
+            if self.total - int(self.total) > 0:
+                string += " and " + str("{:.2f}".format(self.total - int(self.total))) + (" €")
+        print(string + ".")
+
+    def print_all(self):
+        print("Welcome, " + self.calculator.name)
+        print("Your are going to exchange " + self.calculator.money + "$")
+        self.total = float(self.calculator.money) * float(self.rate.value)
+        print("You will receive " + str(self.total) + "€")
+        self.print_notes()
+        print("Goodbye!")

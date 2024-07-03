@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from model.model import Rate, Calculator
+from model.model import Rate, Calculator, Printer
 
 def load_api_key():
     load_dotenv()
@@ -14,8 +14,8 @@ def load_api_key():
 def main():
     rate = Rate(load_api_key())
     rate.get_rate_value()
-    print(rate.value)
     calculator = Calculator()
+    printer = Printer(rate, calculator)
 
 if __name__ == '__main__':
     main()
