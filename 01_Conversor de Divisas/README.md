@@ -1,4 +1,4 @@
-# Proyecto del Día 2: Cambio de Divisas
+# Proyecto 1: Cambio de Divisas (Python)
 
 ### Consigna
 Vas a crear un código que simule el funcionamiento de una **máquina de cambio de divisas**. Por el momento nuestra máquina sólo recibe **dólares** y devuelve **euros**.
