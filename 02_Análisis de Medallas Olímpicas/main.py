@@ -12,6 +12,7 @@ def main():
     medals = Medals(clean.clean_data)
     print("\n\nCountries with more than 10 medals in total:")
     print(medals.medals)
+    print("Average number of medals per country: ", "{:.5f}".format(clean.clean_data['Total'].std()))
 
 if __name__ == '__main__':
     main()
