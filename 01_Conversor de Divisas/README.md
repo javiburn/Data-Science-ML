@@ -24,5 +24,7 @@ Esta aplicación utiliza la API gratuita de ExchangeRate-API, para poder utiliza
 ### Resolución
 
 Para calcular en tiempo real el valor del dólar con respecto al euro decidí conectar mi aplicación la API ExchangeRate-API (en caso de fallar la conexión establece un valor por defecto de 0.9), almacenando este valor en la clase Rate.
+
 A continuación creamos la clase Calculator, que pide los inputs requeridos al usuario y lleva a cabo una comprobación de estos valores para filtrar los datos (que efectivamente se introduzca un nombre, el formato de la fecha sea válido, los dólares tengan un valor numérico...).
+
 A continuación, la clase Printer imprimirá todos estos valores recibiendo una clase Calculator que los tiene almacenados y la clase Rate para multiplicar el número de dólares introducido por el ususario por su tasa de conversión en el mercado.
