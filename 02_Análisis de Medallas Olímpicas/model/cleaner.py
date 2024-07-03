@@ -13,6 +13,7 @@ class DataCleaner:
         print("Number of empty values after cleaning data:")
         self.clean_data = df.fillna(filler)
         print(self.clean_data.isnull().sum())
+        self.clean_data = self.clean_data.astype({"Oro": 'int', "Plata": 'int', "Bronce": 'int'})
 
     def check_sum(self):
         gold = self.clean_data['Oro']
