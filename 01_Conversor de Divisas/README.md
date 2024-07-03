@@ -16,3 +16,7 @@ Con todo eso, la máquina va a imprimir en pantalla (en diferentes líneas por s
 - Información de la cantidad de euros que va a recibir
 - Detalle específico de cuántos billetes de €10, de €1, y el saldo en monedas que le serán entregados
 - Un saludo de despedida
+
+### Uso de la aplicación
+
+Esta aplicación utiliza la API gratuita de ExchangeRate-API, para poder utilizarla debes crear una api-key en esta página e introducirla en un archivo .env bajo la variable API_KEY=your_key.
