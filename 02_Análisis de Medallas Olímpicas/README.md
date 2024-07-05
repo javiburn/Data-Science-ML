@@ -1,4 +1,4 @@
-# Proyecto 2 - Análisis de Medallas Olímpicas
+# Proyecto 2 - Análisis de Medallas Olímpicas (Pandas)
 
 ### Objetivo
 Realizar un análisis exploratorio de datos (EDA) sobre un conjunto de datos de medallas olímpicas utilizando Pandas. Este proyecto te permitirá aplicar los conceptos aprendidos sobre **Series**, **DataFrames**, **limpieza de datos**, **operaciones básicas**, **filtrado** y **agregación** en Pandas.
