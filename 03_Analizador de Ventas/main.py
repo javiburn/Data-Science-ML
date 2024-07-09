@@ -24,14 +24,14 @@ def clean_data(shop):
         # Here should be the code to clean the data on these rows, but in our case everything is correct)
     return shop
 
-def show_highest_sales(shop_cleant):
+def show_highest_sales(shop_cleaned):
     # Show which was the mostly sold product
     print("Producto más vendido:")
-    print(shop_cleant.sort_values(by='Cantidad', ascending=False).head(1))
+    print(shop_cleaned.sort_values(by='Cantidad', ascending=False).head(1))
     # Show the month with highest number of sales and create months column
     print("Mes con mayor número de ventas:")
-    shop_cleant['Mes'] = shop_cleant['Fecha'].dt.month_name()
-    months = shop_cleant.groupby(['Mes'])
+    shop_cleaned['Mes'] = shop_cleaned['Fecha'].dt.month_name()
+    months = shop_cleaned.groupby(['Mes'])
     print(months['Cantidad'].sum().sort_values(ascending=False).head(1))
 
 def main():
@@ -39,14 +39,14 @@ def main():
     shop2 = Shop("./Datos_Ventas_Tienda2.csv")
     # Merging both dataframes and removing duplicated rows 
     shop = merge_and_remove_duplicated_rows(shop1, shop2)
-    shop_cleant = clean_data(shop)
-    show_highest_sales(shop_cleant)
+    shop_cleaned = clean_data(shop)
+    show_highest_sales(shop_cleaned)
     # Group products by categories
-    groups = shop_cleant.groupby(['Producto'])
+    groups = shop_cleaned.groupby(['Producto'])
     print("Ventas por categoría de producto:")
     print(groups['Cantidad'].sum())
     # Create a column to show months
-    shop_cleant.to_csv("./Datos_Ventas_Final.csv", index=False)
+    shop_cleaned.to_csv("./Datos_Ventas_Final.csv", index=False)
 
 if __name__ == '__main__':
     main()

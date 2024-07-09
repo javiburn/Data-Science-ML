@@ -48,7 +48,7 @@ def main():
     clean_prec = show_total_prec(array_prec)
     clean_hum = show_max_hum(array_hum)
 
-    # Create the new and cleant DataFrame
+    # Create the new and cleaned DataFrame
     df['Temperatura'] = clean_temp
     df['Precipitación'] = clean_prec
     df['Humedad'] = clean_hum
