@@ -50,7 +50,7 @@ def main():
 
     # Create the new and cleant DataFrame
     df['Temperatura'] = clean_temp
-    df['Precipitacion'] = clean_prec
+    df['Precipitación'] = clean_prec
     df['Humedad'] = clean_hum
 
     # Print hottest and coldest day
@@ -60,6 +60,9 @@ def main():
     cold = df.sort_values(by='Temperatura').head(1)
     print("Día más frío:")
     print(cold['Fecha'].to_string(index=False))
+
+    # Export the data to a new CSV
+    df.to_csv("datos_meteo_limpios.csv")
 
 if __name__ == '__main__':
     main()
