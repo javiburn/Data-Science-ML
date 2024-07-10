@@ -13,5 +13,3 @@ El proyecto propuesto consistirá en la creación de un programa interactivo par
 3\. Creación un programa (una función o un conjunto de funciones) que le pida al usuario que seleccione una **ciudad** de la lista de ciudades disponibles en nuestro DataFrame, y un **mes** del año.
 
 4\. El programa mostrará al usuario un gráfico que muestre las temperaturas mínimas y máximas que se registraron en la ciudad elegida durante el mes elegido.
-
-5\. El programa debe preguntarle al usuario si desea seguir haciendo consultas o no.
