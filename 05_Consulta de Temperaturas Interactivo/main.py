@@ -47,7 +47,6 @@ def extract_data(df, city, month_num):
               "October", "November", "December"]
     city_values = df.loc[df['Ciudad'] == city]
     city_values = city_values.reset_index(drop=True)
-    print(city_values)
     month = months[month_num]
     months_df = city_values
     months_df['Mes'] = city_values['Fecha'].dt.month_name()
